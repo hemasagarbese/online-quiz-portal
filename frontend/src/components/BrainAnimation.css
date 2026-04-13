@@ -1,0 +1,49 @@
+.brain-container {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: 50px auto;
+  background: radial-gradient(circle at center, #001f3f, #000814);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  perspective: 1200px;
+  transform: rotateX(15deg); /* cinematic tilt */
+}
+
+.brain {
+  font-size: 120px;
+  z-index: 10; /* ensure it's on top */
+  color: #FFD700;
+  text-shadow: 0 0 20px #FFD700, 0 0 40px #FFD700;
+}
+
+.symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 24px;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+  transform-origin: center center;
+  animation: rotate3D var(--speed) linear infinite;
+}
+
+/* 3D rotation animation */
+@keyframes rotate3D {
+  0% {
+    transform: rotateX(var(--tilt)) rotateY(0deg) translateX(var(--radius)) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(var(--tilt)) rotateY(360deg) translateX(var(--radius)) rotateY(-360deg);
+  }
+}
+
+/* Optional: multiple symbols with different speeds and radii */
+.symbol:nth-child(1) { --radius: 300px; --tilt: 10deg; --speed: 12s; }
+.symbol:nth-child(2) { --radius: 250px; --tilt: 25deg; --speed: 18s; }
+.symbol:nth-child(3) { --radius: 350px; --tilt: 5deg; --speed: 15s; }
+.symbol:nth-child(4) { --radius: 200px; --tilt: 30deg; --speed: 20s; }
+.symbol:nth-child(5) { --radius: 280px; --tilt: 15deg; --speed: 14s; }

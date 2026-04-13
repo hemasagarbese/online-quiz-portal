@@ -1,0 +1,114 @@
+.register-container {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #001f3f, #000814);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: auto;
+}
+
+.register-box {
+  background: rgba(10, 26, 47, 0.95);
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  text-align: center;
+  color: #ffffff;
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 10;
+  position: relative;
+}
+
+.register-box h2 {
+  margin-bottom: 25px;
+  color: #FFD700;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 5px #61DAFB;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background: #61DAFB;
+  border: none;
+  border-radius: 8px;
+  color: #000814;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: #52c7f0;
+}
+
+.login-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+.back-home-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #FFD700;
+  color: #000814;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-home-btn:hover {
+  background: #e6c200;
+}
+
+/* BrainAnimation behind content */
+.register-container .brain-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 1200px;
+  height: 1200px;
+  opacity: 0.12;
+}
